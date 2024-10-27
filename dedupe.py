@@ -12,6 +12,7 @@ data = [
     {"first_name": "J", "last_name": None, "email": None, "phone": None},
 ]
 
+# as a chief
 df = pd.DataFrame(data)
 
 def normalize_name(name):
@@ -48,7 +49,7 @@ def deduplicate_records(df):
         else:
             # If no match found, add the record to deduplicated
             deduplicated.append(row.to_dict())
-
+    
     # Remove any duplicates explicitly defined by first and last names being very similar
     final_records = []
     for record in deduplicated:
